@@ -1,0 +1,1 @@
+export const UPDATE_TEXT_HOME = 'UPDATE_TEXT_HOME';
