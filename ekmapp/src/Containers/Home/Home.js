@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text, View, TextInput, Button} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 
 class Home extends Component {
     updateHomeText = (e) => {
@@ -13,10 +13,17 @@ class Home extends Component {
             <View style={styles.container}>
             <Text style={styles.welcome}>Welcome to React Native!</Text>
             <Text style={styles.instructions}>To get started, edit App.js</Text>
-            <Button
+            <TouchableOpacity 
               onPress={this.props.goToOrders}
-              title="Go to Orders"
-            />
+              style={{  
+                button: {
+                alignItems: 'center',
+                backgroundColor: '#DDDDDD',
+                padding: 10
+              }}}
+            >
+              <Text>Go to Orders</Text>
+            </TouchableOpacity>
         </View>
     );
   }

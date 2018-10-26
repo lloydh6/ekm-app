@@ -14,13 +14,10 @@ export default class App extends Component {
     return (
       <Provider store={store}>
         <RouterWithRedux>
-          <Scene key="root">
+          <Scene key="main" tabs={true} tabBarStyle={{backgroundColor: '#ffffff'}}>
             <Scene key="home" component={Home} title="Home" initial={true} />
             <Scene key="orders" component={Orders} title="Orders" />
-            <Scene key="rootTabBar" tabs={true} tabBarStyle={{backgroundColor: '#ffffff'}}>
-              <Scene key="home" component={Home} title="Home" initial={true} />
-              <Scene key="search" component={Orders} title="Orders" />
-            </Scene>
+            <Scene key="more" component={} title="More" />
           </Scene>
         </RouterWithRedux>
       </Provider>
