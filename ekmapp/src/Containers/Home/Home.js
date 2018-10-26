@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text, View, TextInput} from 'react-native';
+import {StyleSheet, Text, View, TextInput, Button} from 'react-native';
 
 class Home extends Component {
     updateHomeText = (e) => {
@@ -7,15 +7,15 @@ class Home extends Component {
     }
 
     render() {
-        console.log(this);
+      console.log(this.props);
+      
         return (
             <View style={styles.container}>
             <Text style={styles.welcome}>Welcome to React Native!</Text>
             <Text style={styles.instructions}>To get started, edit App.js</Text>
-            <TextInput 
-                style={{height: 40, borderColor: 'gray', borderWidth: 1}}
-                value={this.props.home.DisplayText}
-                onChangeText={this.updateHomeText}
+            <Button
+              onPress={this.props.goToOrders}
+              title="Go to Orders"
             />
         </View>
     );
