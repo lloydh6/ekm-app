@@ -1,12 +1,14 @@
 import React, {Component} from 'react';
-import { View } from 'react-native';
+import { View, Text } from 'react-native';
 
-class More extends Comment {
+class More extends Component {
     render() {
         return(
             <View>
-                More Page
+                <Text>More Page</Text>
             </View>
         )
     }
 }
+
+export default More;
